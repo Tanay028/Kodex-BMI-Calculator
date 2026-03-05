@@ -1,0 +1,127 @@
+:root {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --primary: #bb86fc;
+    --text: #e0e0e0;
+    --underweight: #3498db;
+    --normal: #2ecc71;
+    --overweight: #f1c40f;
+    --obese: #e74c3c;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.calculator-box {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background: #333;
+    border: 1px solid #444;
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.unit-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.unit-toggle button {
+    flex: 1;
+    padding: 8px;
+    cursor: pointer;
+    background: #333;
+    border: none;
+    color: #888;
+    border-radius: 5px;
+}
+
+.unit-toggle button.active {
+    background: var(--primary);
+    color: black;
+    font-weight: bold;
+}
+
+.dual-input {
+    display: flex;
+    gap: 10px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+button#calculateBtn {
+    flex: 2;
+    background: var(--primary);
+    color: black;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button#resetBtn {
+    flex: 1;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.result-card {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.hidden { display: none; }
+
+.history-section {
+    margin-top: 30px;
+}
+
+#historyList {
+    list-style: none;
+    padding: 0;
+}
+
+#historyList li {
+    background: var(--card);
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        
+        <div class="calculator-box">
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" id="userName" placeholder="Enter your name">
+            </div>
+
+            <div class="unit-toggle">
+                <button id="metricBtn" class="active">Metric (cm/kg)</button>
+                <button id="imperialBtn">Imperial (ft/lbs)</button>
+            </div>
+
+            <div class="inputs">
+                <div class="input-group">
+                    <label id="weightLabel">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="0">
+                </div>
+
+                <div class="input-group" id="metricHeight">
+                    <label>Height (cm)</label>
+                    <input type="number" id="heightCm" placeholder="0">
+                </div>
+
+                <div class="input-group hidden" id="imperialHeight">
+                    <label>Height (ft / in)</label>
+                    <div class="dual-input">
+                        <input type="number" id="heightFt" placeholder="ft">
+                        <input type="number" id="heightIn" placeholder="in">
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="calculateBtn">Calculate BMI</button>
+                <button id="resetBtn">Clear All</button>
+            </div>
+
+            <div id="resultCard" class="result-card hidden">
+                <h2 id="bmiValue">00.0</h2>
+                <p id="bmiCategory">Normal</p>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h3>Recent History</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
